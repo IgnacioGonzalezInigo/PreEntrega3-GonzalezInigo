@@ -32,6 +32,74 @@
             </ul>
         </nav>
     </header>
+    <!-- Main -->
+    <!-- Sección de Bienvenida -->
+    <section class="bienvenida py-5">
+        <div class="container text-center">
+            <h1 class="bienvenida--titulo mb-3">CONTA<span class="resaltado-color">CTO</span></h1>
+            <p class="bienvenida--parrafo">
+                ¡Estamos para vos! Escribinos y contanos qué necesitás para seguir entrenando con todo
+            </p>
+        </div>
+        <div class="caja-iconos">
+            <a href="https://www.whatsapp.com/" target="_blank"><img src="../icons/whatsapp.svg" alt="Whatsapp"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="../icons/instagram.svg" alt="Instagram"></a>
+        </div>
+    </section>
+    <!-- Formulario -->
+    <div class="form-container">
+        <form>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+                </div>
+                <div class="col-md-6">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" placeholder="Tu apellido">
+                </div>
+                <div class="col-md-6">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono" placeholder="Ej: 11 2345 6789">
+                </div>
+                <div class="col-md-6">
+                    <label for="dni" class="form-label">DNI | Pasaporte</label>
+                    <input type="text" class="form-control" id="dni" placeholder="Número de documento">
+                </div>
+                <div class="col-12">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+                </div>
+                <div class="col-md-6">
+                    <label for="motivo" class="form-label">Motivo</label>
+                    <input type="text" class="form-control" id="motivo" placeholder="¿Por qué nos escribís?">
+                </div>
+                <div class="col-md-6">
+                    <label for="sede" class="form-label">Sede</label>
+                    <select id="sede" class="form-select" required>
+                      <option value="" disabled selected>Seleccioná una sede</option>
+                      <option value="Palermo">Palermo</option>
+                      <option value="Belgrano">Belgrano</option>
+                      <option value="Recoleta">Recoleta</option>
+                      <option value="Caballito">Caballito</option>
+                    </select>
+                  </div>
+                <div class="col-12">
+                    <label for="comentario" class="form-label">Comentario</label>
+                    <textarea class="form-control" id="comentario" rows="4" placeholder="Contanos lo que quieras :)"></textarea>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-dark px-5 rounded-pill">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="contacto--foto">
+        <img src="../images/contacto-img.jfif" alt="Publicidad Bitfit">
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer--columna footer--logo">
