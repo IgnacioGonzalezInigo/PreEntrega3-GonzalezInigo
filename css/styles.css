@@ -403,4 +403,8 @@ body {
         right: 0.8em;
         bottom: 1.1em;
     }
+    .footer--contacto__icons img {
+        width: 18px;
+        height: auto;
+    }
 }
