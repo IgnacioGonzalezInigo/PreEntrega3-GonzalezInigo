@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BITFIT | Sedes</title>
+    <!-- Vinculacion con Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <!-- Vinculacion al archivo CSS  -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header--logo">
+            <img src="../images/logo.png" alt="Logo BITFIT">
+        </div>
+        <h1 class="header--marca">BITFIT</h1>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+        <label for="menu-toggle" class="menu-toggle-label">☰</label>
+        <nav class="header--nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+                <li><a href="planes.html">Planes</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main -->
+    <main>
+        <!-- Sección de Bienvenida -->
+        <section class="bienvenida py-5">
+            <div class="container text-center">
+                <h1 class="bienvenida--titulo mb-3">NUESTRAS <span class="resaltado-color">SEDES</span></h1>
+                <p class="bienvenida--parrafo">
+                  Entrená donde más te convenga.
+                  Nuestras sedes BITFIT están diseñadas para ofrecerte espacios cómodos, modernos y equipados para que vivas la mejor experiencia de entrenamiento, cerca tuyo.
+                </p>
+            </div>
+        </section>
+        <div class="container my-5">
+            <div class="row justify-content-center g-4">
+          
+              <!-- Card Belgrano -->
+              <div class="col-10 col-md-8 col-lg-6">
+                <div class="card card-clase" style="background-image: url('../images/sede_belgrano.jpeg');">
+                  <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+                    <h2 class="card-title mb-3">BELGRANO</h2>
+                    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBelgrano" aria-expanded="false" aria-controls="collapseBelgrano">
+                        Ver más
+                    </button>
+                  </div>
+                  <div class="collapse" id="collapseBelgrano">
+                    <div class="card-body bg-light text-dark text-center">
+                        <p>Lunes a Viernes : 8.00 - 22.00</p>
+                        <p>Sabados y feriados: 9.00 - 13.00</p>
+                        <div class="iframe--box">
+                            <iframe src="https://maps.google.com/?q=Belgrano,+Buenos+Aires,+Argentina&output=embed" width="50%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3">¡Vení a BITFIT Belgrano!</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Card Palermo -->
+              <div class="col-10 col-md-8 col-lg-6">
+                <div class="card card-clase" style="background-image: url('../images/sede_palermo.jpeg');">
+                  <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+                    <h2 class="card-title mb-3">PALERMO</h2>
+                    <button class="btn btn-light toggle-text" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePalermo" aria-expanded="false" aria-controls="collapsePalermo">
+                        Ver más
+                    </button>
+                  </div>
+                  <div class="collapse" id="collapsePalermo">
+                    <div class="card-body bg-light text-dark text-center">
+                        <p>Lunes a Viernes : 8.00 - 22.00</p>
+                        <p>Sabados y feriados: 9.00 - 13.00</p>
+                        <div class="iframe--box">
+                            <iframe src="https://maps.google.com/?q=Palermo,+Buenos+Aires,+Argentina&output=embed" width="50%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3">¡Vení a BITFIT Palermo!</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Card Caballito -->
+              <div class="col-10 col-md-8 col-lg-6">
+                <div class="card card-clase" style="background-image: url('../images/sede_caballito.jpeg');">
+                  <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+                    <h2 class="card-title mb-3">CABALLITO</h2>
+                    <button class="btn btn-light toggle-text" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCaballito" aria-expanded="false" aria-controls="collapseCaballito">
+                        Ver más
+                    </button>
+                  </div>
+                  <div class="collapse" id="collapseCaballito">
+                    <div class="card-body bg-light text-dark text-center">
+                        <p>Lunes a Viernes : 8.00 - 22.00</p>
+                        <p>Sabados y feriados: 9.00 - 13.00</p>
+                        <div class="iframe--box">
+                            <iframe src="https://maps.google.com/?q=Caballito,+Buenos+Aires,+Argentina&output=embed" width="50%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3">¡Vení a BITFIT Caballito!</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Card Saavedra -->
+              <div class="col-10 col-md-8 col-lg-6">
+                <div class="card card-clase" style="background-image: url('../images/sede_saavedra.jpeg');">
+                  <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+                    <h2 class="card-title mb-3">SAAVEDRA</h2>
+                    <button class="btn btn-light toggle-text" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSaavedra" aria-expanded="false" aria-controls="collapseSaavedra">
+                        Ver más
+                    </button>
+                  </div>
+                  <div class="collapse" id="collapseSaavedra">
+                    <div class="card-body bg-light text-dark text-center">
+                        <p>Lunes a Viernes : 8.00 - 22.00</p>
+                        <p>Sabados y feriados: 9.00 - 13.00</p>
+                        <div class="iframe--box">
+                            <iframe src="https://maps.google.com/?q=Saavedra,+Buenos+Aires,+Argentina&output=embed" width="50%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3">¡Vení a BITFIT Saavedra!</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </div>     
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer--columna footer--logo">
+            <h3>BITFIT</h3>
+            <img src="../images/logo.png" alt="Logo BITFIT">
+        </div>
+        <div class="footer--columna footer--contacto">
+            <p class="footer--contacto__titulo">CONTACTO</p>
+                <div class="footer--contacto__icons">
+                    <a href="https://www.whatsapp.com/" target="_blank"><img src="../icons/whatsapp.svg" alt="Whatsapp"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="../icons/instagram.svg" alt="Instagram"></a>
+                    <a href="./pages/contacto.html" target="_blank"><img src="../images/asistente.png" alt="Asistente"></a>
+                </div>
+                <p class="copy">
+                    <strong>BITFIT ® BY IGNACIO GONZÁLEZ IÑIGO</strong><br />2025 © TODOS LOS DERECHOS RESERVADOS
+                </p>
+        </div>
+        <div class="footer--columna footer--apps">
+            <a href="https://www.appstore.com/" target="_blank"><img src="../images/appstore.png" alt="Descargar en App Store"></a>
+            <a href="https://www.googleplay.com/" target="_blank"><img src="../images/googleplay.png" alt="Descargar en Google Play"></a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

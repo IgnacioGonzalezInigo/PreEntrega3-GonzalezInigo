@@ -1,0 +1,374 @@
+/* Reset y body  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Barlow', sans-serif;
+    background-color: #ffffff;
+    color: #111;
+    max-width: 100%;
+}
+
+/* Estilos Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 10;
+}
+.header--logo{
+    display: flex;
+    align-items: center;
+}
+.header--logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 0.5rem;
+}
+.header--marca {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.header--nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: white;
+    padding: 1rem 2rem;
+}
+.header--nav ul{
+    list-style: none;
+    padding: 0;
+}
+.header--nav li {
+    margin-bottom: 1rem;
+}
+.header--nav a {
+    text-decoration: none;
+    color: black;
+}
+.header--nav a:hover {
+    color: #c8d500;
+}
+
+/* Menu Hamburguesa Checkbox*/
+.menu-toggle-checkbox {
+    display: none;
+}
+.menu-toggle-label {
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 100;
+}
+.menu-toggle-checkbox:checked ~ .header--nav{
+    display: block;
+}
+
+/* Estilos Seccion Principal  */
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+.hero--subtitulo {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+.hero h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+.hero--img {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+}
+.hero--img img {
+    width: 100%; 
+    height: auto;
+    border-radius: 1rem;
+}
+/* Secciones Clases y Sedes  */
+.clases, .sedes {
+    padding: 2rem;
+    text-align: center;
+}
+.section--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 7%;
+    margin-bottom: 2%;
+}
+.section--header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.section--contenedor-cards{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 2rem; 
+    width: 100%;
+    max-width: 86%;
+    box-sizing: border-box; 
+    margin: 0 auto;
+}
+.card {
+    display: flex;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden; 
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+}
+.card img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+    filter: brightness(0.5); /* Oscurece la imagen */
+}
+.card-titulo {
+    position: absolute;
+    bottom: 0.9em;
+    left: 1em;
+    font-weight: bold;
+    font-size: 2em; /* relativo al font-size de .card */
+    color: #ffffff;
+    z-index: 2;
+}
+.card-flecha {
+    display: flex;
+    align-items: center;
+}
+.boton-flecha {
+    position: absolute;
+    right: 1em;
+    bottom: 1.5em;
+    display: block;
+    width: 2.5em;
+    height: 2.5em;
+    cursor: pointer;
+    z-index: 2;
+}
+.boton-flecha img {
+    position: absolute;
+    filter: brightness(1);
+    width: 100%;
+    height: 100%;
+}
+.boton-flecha img.flecha-normal {
+    opacity: 1;
+}
+.boton-flecha img.flecha-hover {
+    opacity: 0;
+}
+.boton-flecha:hover img.flecha-normal {
+    opacity: 0;
+}
+.boton-flecha:hover img.flecha-hover {
+    opacity: 1;
+}
+.section--boton {
+    text-align: center;
+    margin: 4rem auto;
+}
+/* Generalidades / Extras  */
+.resaltado-color {
+    color: #c8d500;
+}
+.resaltado-negro {
+    color: #111;
+}
+.ver-todas {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #111;
+}
+.ver-todas:hover {
+    color: #c8d500;
+}
+.btn {
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+} 
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+#collapseBelgrano {
+    background-color: #000;
+}
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    text-align: center;
+    gap: 0.1rem; 
+}
+.footer--columna {
+    flex: 1;
+    min-width: 250px;
+}
+.footer--logo h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.footer--logo img {
+    width: 40px;
+    height: auto;
+}
+.footer--contacto__titulo {
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+.footer--contacto__icons img {
+    width: 24px;
+    height: 24px;
+    margin: 0 0.5rem;
+}
+.footer--apps img {
+    width: 120px;
+    height: auto;
+    margin: 0.5rem;
+}
+.copy {
+    font-size: 0.7rem;
+    color: #444;
+    margin-top: 1rem;
+    line-height: 1.4;
+}
+
+/* Seccion de Bienvenida */
+.bienvenida h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+.card-clase {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    min-height: 300px; /* Solo altura mínima */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}  
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    min-height: 300px;
+}
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+.btn-light {
+    background-color: #ffffffcc;
+    color: #000;
+    border: none;
+    transition: all 0.3s ease;
+}
+.btn-light:hover {
+    background-color: #c8d500;
+    color: #fff;
+}
+.iframe--box {
+    width: 100%;
+    justify-content: center;
+}
+/* Media Queries */
+@media screen and (max-width: 768px){
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+    .hero--subtitulo{
+        font-size: 1rem;
+    }
+    .hero--img {
+        width: 100%;
+    }
+    .section--contenedor-cards{
+        max-width: 92%;
+        margin: 2rem auto;
+        grid-template-columns: 1fr;
+    }
+    .card{
+        font-size: 0.9rem;
+    }
+    .card-titulo {
+        font-size: 2.5rem;
+        left: 0.5em;
+        bottom: 0.5em;
+    }
+    .boton-flecha {
+        width: 2.5em;
+        height: 2.5em;
+        right: 1.5em;
+        bottom: 2em;
+    }
+    .footer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer--columna {
+        min-width: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero--subtitulo {
+        font-size: 0.9rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .hero--img img {
+        max-height: 280px;
+    }
+  
+    .card {
+        font-size: 0.85rem;
+    }
+    .card-titulo {
+         font-size: 2.2em;
+        left: 0.5em;
+        bottom: 0.5em;
+    }
+    .boton-flecha {
+        width: 1.8em;
+        height: 1.8em;
+        right: 0.8em;
+        bottom: 1.1em;
+    }
+}
