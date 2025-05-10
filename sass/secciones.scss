@@ -1,0 +1,42 @@
+.clases, .sedes {
+    padding: 2rem;
+    text-align: center;
+
+    .section--header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 7%;
+        margin-bottom: 2%;
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .ver-todas {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: #111;
+
+            &:hover {
+        	    color: #c8d500;
+            }
+        }
+    }
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+} 
+.btn:hover {
+    background-color: black;
+    color: white;
+}

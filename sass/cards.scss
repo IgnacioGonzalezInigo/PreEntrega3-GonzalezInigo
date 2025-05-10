@@ -1,0 +1,123 @@
+.section--contenedor-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 2rem; 
+    width: 100%;
+    max-width: 86%;
+    box-sizing: border-box; 
+    margin: 0 auto;
+
+    @media screen and (max-width: 768px) {
+        max-width: 92%;
+        margin: 2rem auto;
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    display: flex;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden; 
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+
+    img {
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+        display: block;
+        object-fit: cover;
+        filter: brightness(0.5); /* Oscurece la imagen */
+    }
+
+    .card-titulo {
+        position: absolute;
+        bottom: 0.9em;
+        left: 1em;
+        font-weight: bold;
+        font-size: 2em;
+        color: #ffffff;
+        z-index: 2;
+        @media screen and (max-width: 768px) {
+            font-size: 2.5rem;
+            left: 0.5em;
+            bottom: 0.5em;
+        }
+        @media screen and (max-width: 480px) {
+            font-size: 2.2em;
+            left: 0.5em;
+            bottom: 0.5em;
+        }
+        
+    }
+
+    .card-flecha {
+        display: flex;
+        align-items: center;
+
+        .boton-flecha {
+            position: absolute;
+            right: 1em;
+            bottom: 1.5em;
+            display: block;
+            width: 2.5em;
+            height: 2.5em;
+            cursor: pointer;
+            z-index: 2;
+            
+            @media screen and (max-width: 768px){
+                width: 2.5em;
+                height: 2.5em;
+                right: 1.5em;
+                bottom: 2em;
+            }
+            @media screen and (max-width: 480px) {
+                width: 1.8em;
+                height: 1.8em;
+                right: 0.8em;
+                bottom: 1.1em;
+            }
+            img {
+                position: absolute;
+                filter: brightness(1);
+                width: 100%;
+                height: 100%;
+                
+                &.flecha-normal {
+                    opacity: 1;
+                }
+                
+                &.flecha-hover {
+                    opacity: 0;
+                }
+            }
+
+            &:hover {
+                img {
+                    &.flecha-normal {
+                        opacity: 0;
+                    }
+
+                    &.flecha-hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 0.9rem;
+    }
+    @media screen and (max-width: 480px) {
+        font-size: 0.85rem;
+    }
+
+}
+.section--boton {
+    text-align: center;
+    margin: 4rem auto;
+}
