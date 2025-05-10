@@ -1,0 +1,65 @@
+.footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    text-align: center;
+    gap: 0.1rem; 
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    &--columna{
+        flex: 1;
+        min-width: 250px;
+        @media screen and (max-width: 768px){
+            min-width: auto;
+        }
+    }
+    
+    &--logo {
+        h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        img {
+            width: 40px;
+            height: auto;
+        }
+    }
+
+    &--contacto {
+        &__titulo {
+            font-size: 0.9rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 0.75rem;
+        }
+        &__icons {
+            img {
+                width: 24px;
+                height: 24px;
+                margin: 0 0.5rem;
+                @media screen and (max-width: 480px){
+                    width: 18px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    &--apps img{
+        width: 120px ;
+        height: auto ;
+        margin: 0.5rem;
+    }
+}
+
+.copy {
+    font-size: 0.7rem;
+    color: #444;
+    margin-top: 1rem;
+    line-height: 1.4;
+}

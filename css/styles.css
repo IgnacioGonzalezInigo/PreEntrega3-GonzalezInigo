@@ -130,6 +130,14 @@ body {
   }
 }
 
+.resaltado-color {
+  color: #c8d500;
+}
+
+.resaltado-negro {
+  color: #111;
+}
+
 .clases, .sedes {
   padding: 2rem;
   text-align: center;
@@ -290,6 +298,68 @@ body {
 .section--boton {
   text-align: center;
   margin: 4rem auto;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  text-align: center;
+  gap: 0.1rem;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.footer--columna {
+  flex: 1;
+  min-width: 250px;
+}
+@media screen and (max-width: 768px) {
+  .footer--columna {
+    min-width: auto;
+  }
+}
+.footer--logo h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.footer--logo img {
+  width: 40px;
+  height: auto;
+}
+.footer--contacto__titulo {
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+.footer--contacto__icons img {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.5rem;
+}
+@media screen and (max-width: 480px) {
+  .footer--contacto__icons img {
+    width: 18px;
+    height: auto;
+  }
+}
+.footer--apps img {
+  width: 120px;
+  height: auto;
+  margin: 0.5rem;
+}
+
+.copy {
+  font-size: 0.7rem;
+  color: #444;
+  margin-top: 1rem;
+  line-height: 1.4;
 }
 
 /*# sourceMappingURL=styles.css.map */
