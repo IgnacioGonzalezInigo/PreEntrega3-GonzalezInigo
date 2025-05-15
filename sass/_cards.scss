@@ -121,3 +121,27 @@
     text-align: center;
     margin: 4rem auto;
 }
+
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    min-height: 300px;
+}
+
+.card-clase {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    min-height: 300px; /* Solo altura mínima */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}  

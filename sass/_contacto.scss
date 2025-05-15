@@ -1,0 +1,38 @@
+
+/* Caja de Iconos Formulario de Contacto */
+.caja-iconos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.caja-iconos img {
+    width: 30px;
+    height: auto;
+    padding: 4px;
+}
+.form-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contacto--foto {
+    display: flex;
+    justify-content: center;
+}
+.contacto--foto img{
+    width: 50%;
+    height: auto;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px){
+
+   
+  
+    .contacto--foto img{
+        width: 100%;
+        height: auto;
+    }
+}
+
