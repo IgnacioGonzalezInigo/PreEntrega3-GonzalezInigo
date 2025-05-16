@@ -1,12 +1,14 @@
-@use "base/variables";
-@use "base/general" ;
+@import "base/variables";
+@import "base/general" ;
 
-@use "layout/header" ;
-@use "layout/footer" ;
+@import "layout/header" ;
+@import "layout/footer" ;
 
-@use "components/buttons";
-@use "components/cards";
+@import "components/buttons";
+@import "components/cards";
 
-@use "sections/hero";
-@use "sections/secciones";
-@use "sections/contacto";
+@import "sections/hero";
+@import "sections/secciones";
+@import
+
+"sections/contacto";
