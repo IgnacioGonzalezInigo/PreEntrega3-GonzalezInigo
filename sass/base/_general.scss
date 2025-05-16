@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Barlow', sans-serif;
-    background-color: #ffffff;
-    color: #111;
+    font-family: $fuente;
+    background-color:$blanco ;
+    color: $negro;
     max-width: 100%;
 }
 .bienvenida h1 {
@@ -17,10 +17,10 @@ body {
 }
 
 .resaltado-color {
-    color: #c8d500;
+    color: $amarillo;
 }
 .resaltado-negro {
-    color: #111;
+    color: $negro;
 }
 
 .iframe--box {

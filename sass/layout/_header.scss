@@ -25,7 +25,7 @@
         position: absolute;
         top: 60px;
         right: 0;
-        background: white;
+        background: $blanco;
         padding: 1rem 2rem;
 
         ul{
@@ -38,7 +38,7 @@
                 text-decoration: none;
                 color: black;
                 &:hover{
-                    color: #c8d500; 
+                    color:$amarillo ; 
                 }
             }
 

@@ -18,10 +18,10 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 0.9rem;
-            color: #111;
+            color: $negro;
 
             &:hover {
-        	    color: #c8d500;
+        	    color: $amarillo;
             }
         }
     }
