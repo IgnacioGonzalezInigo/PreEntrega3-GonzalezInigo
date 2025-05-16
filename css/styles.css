@@ -154,7 +154,7 @@ body {
   line-height: 1.4;
 }
 
-.btn {
+.btn, .btn-light {
   padding: 0.75rem 2rem;
   font-weight: bold;
   border: 2px solid #000;
@@ -164,7 +164,7 @@ body {
   text-decoration: none;
 }
 
-.btn:hover {
+.btn:hover, .btn-light:hover {
   background-color: #000;
   color: #fff;
 }
@@ -175,7 +175,6 @@ body {
   border: none;
   transition: all 0.3s ease;
 }
-
 .btn-light:hover {
   background-color: #c8d500;
   color: #fff;

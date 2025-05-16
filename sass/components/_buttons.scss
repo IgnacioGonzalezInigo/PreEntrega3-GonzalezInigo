@@ -13,12 +13,13 @@
 }
 
 .btn-light {
+    @extend .btn;
     background-color: #ffffffcc;
     color: $negro;
     border: none;
     transition: all 0.3s ease;
-}
-.btn-light:hover {
-    background-color: $amarillo;
-    color: $blanco;
+    &:hover {
+        background-color: $amarillo;
+        color: $blanco;
+    }
 }
