@@ -1,0 +1,5 @@
+@mixin responsive($tamano) {
+    @media screen and (max-width: $tamano) {
+        @content;
+    }
+}

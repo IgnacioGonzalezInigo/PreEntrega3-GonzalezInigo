@@ -7,11 +7,12 @@
     box-sizing: border-box; 
     margin: 0 auto;
 
-    @media screen and (max-width: 768px) {
+    @include responsive ($pantalla1){
         max-width: 92%;
         margin: 2rem auto;
         grid-template-columns: 1fr;
     }
+
 }
 
 .card {
@@ -41,17 +42,16 @@
         font-size: 2em;
         color: $blanco;
         z-index: 2;
-        @media screen and (max-width: 768px) {
-            font-size: 2.5rem;
+        @include responsive ($pantalla1){
+             font-size: 2.5rem;
             left: 0.5em;
             bottom: 0.5em;
         }
-        @media screen and (max-width: 480px) {
+        @include responsive ($pantalla2){
             font-size: 2.2em;
             left: 0.5em;
             bottom: 0.5em;
-        }
-        
+        }        
     }
 
     .card-flecha {
@@ -68,18 +68,19 @@
             cursor: pointer;
             z-index: 2;
             
-            @media screen and (max-width: 768px){
+            @include responsive ($pantalla1){
                 width: 2.5em;
                 height: 2.5em;
                 right: 1.5em;
                 bottom: 2em;
             }
-            @media screen and (max-width: 480px) {
+            @include responsive ($pantalla2){
                 width: 1.8em;
                 height: 1.8em;
                 right: 0.8em;
                 bottom: 1.1em;
             }
+
             img {
                 position: absolute;
                 filter: brightness(1);
@@ -109,10 +110,10 @@
         }
     }
 
-    @media screen and (max-width: 768px) {
+    @include responsive ($pantalla1) {
         font-size: 0.9rem;
     }
-    @media screen and (max-width: 480px) {
+    @include responsive ($pantalla2){
         font-size: 0.85rem;
     }
 

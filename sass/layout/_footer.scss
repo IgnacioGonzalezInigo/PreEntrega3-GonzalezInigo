@@ -7,13 +7,13 @@
     text-align: center;
     gap: 0.1rem; 
 
-    @media screen and (max-width: 768px) {
+    @include responsive ($pantalla1) {
         grid-template-columns: repeat(3, 1fr);
     }
     &--columna{
         flex: 1;
         min-width: 250px;
-        @media screen and (max-width: 768px){
+        @include responsive ($pantalla1){
             min-width: auto;
         }
     }
@@ -42,7 +42,7 @@
                 width: 24px;
                 height: 24px;
                 margin: 0 0.5rem;
-                @media screen and (max-width: 480px){
+                @include responsive ($pantalla2){
                     width: 18px;
                     height: auto;
                 }
