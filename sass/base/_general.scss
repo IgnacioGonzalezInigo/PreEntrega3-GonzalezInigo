@@ -9,10 +9,21 @@ body {
     color: #111;
     max-width: 100%;
 }
+.bienvenida h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
 
 .resaltado-color {
     color: #c8d500;
 }
 .resaltado-negro {
     color: #111;
+}
+
+.iframe--box {
+    width: 100%;
+    justify-content: center;
 }
