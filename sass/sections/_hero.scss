@@ -1,3 +1,5 @@
+@use "../base/variables";
+@use "../base/mixin";
 .hero {
     text-align: center;
     padding: 2rem 1rem;
@@ -6,10 +8,10 @@
         font-size: 1.2rem;
         letter-spacing: 1px;
         margin-bottom: 1rem;
-        @include responsive ($pantalla1){
+        @include mixin.responsive (variables.$pantalla1){
             font-size: 1rem;
         }
-        @include responsive ($pantalla2){
+        @include mixin.responsive (variables.$pantalla2){
             font-size: 0.9rem;
             margin-bottom: 1.2rem;
         }
@@ -19,10 +21,10 @@
         font-weight: 900;
         font-style: italic;
         margin-bottom: 2rem;
-        @include responsive ($pantalla1){
+        @include mixin.responsive (variables.$pantalla1){
             font-size: 3.2rem;
         }
-        @include responsive ($pantalla2){
+        @include mixin.responsive (variables.$pantalla2){
             font-size: 2.2rem;
         }
     }
@@ -32,14 +34,14 @@
         width: 90%;
         max-width: 700px;
         position: relative;
-        @include responsive ($pantalla1){
+        @include mixin.responsive (variables.$pantalla1){
             width: 100%;
         } 
         img {
             width: 100%; 
             height: auto;
             border-radius: 1rem;
-            @include responsive ($pantalla2) {
+            @include mixin.responsive (variables.$pantalla2) {
                 max-height: 280px;
             }
         }

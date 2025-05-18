@@ -1,4 +1,5 @@
-
+@use "../base/variables";
+@use "../base/mixin";
 /* Caja de Iconos Formulario de Contacto */
 .caja-iconos {
     width: 100%;
@@ -22,7 +23,7 @@
     img {
         width: 50%;
         height: auto;
-        @include responsive ($pantalla1) {
+        @include mixin.responsive (variables.$pantalla1) {
              width: 100%;
             height: auto;
         }

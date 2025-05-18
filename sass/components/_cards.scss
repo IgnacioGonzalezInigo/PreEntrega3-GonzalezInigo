@@ -42,7 +42,7 @@
         left: 1em;
         font-weight: bold;
         font-size: 2em;
-        color: $blanco;
+        color: variables.$blanco;
         z-index: 2;
         @include mixin.responsive (variables.$pantalla1){
              font-size: 2.5rem;

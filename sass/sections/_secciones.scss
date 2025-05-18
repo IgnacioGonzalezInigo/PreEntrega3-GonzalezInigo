@@ -1,3 +1,5 @@
+@use "../base/variables";
+
 .clases, .sedes {
     padding: 2rem;
     text-align: center;
@@ -18,10 +20,10 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 0.9rem;
-            color: $negro;
+            color: variables.$negro;
 
             &:hover {
-        	    color: $amarillo;
+        	    color: variables.$amarillo;
             }
         }
     }
