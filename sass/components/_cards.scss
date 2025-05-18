@@ -1,3 +1,6 @@
+@use "base/variables";
+@use "base/mixin";
+
 .section--contenedor-cards {
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
@@ -7,12 +10,11 @@
     box-sizing: border-box; 
     margin: 0 auto;
 
-    @include responsive ($pantalla1){
+    @include mixin.responsive (variables.$pantalla1){
         max-width: 92%;
         margin: 2rem auto;
         grid-template-columns: 1fr;
     }
-
 }
 
 .card {
@@ -42,12 +44,12 @@
         font-size: 2em;
         color: $blanco;
         z-index: 2;
-        @include responsive ($pantalla1){
+        @include mixin.responsive (variables.$pantalla1){
              font-size: 2.5rem;
             left: 0.5em;
             bottom: 0.5em;
         }
-        @include responsive ($pantalla2){
+         @include mixin.responsive (variables.$pantalla2){
             font-size: 2.2em;
             left: 0.5em;
             bottom: 0.5em;
@@ -68,13 +70,13 @@
             cursor: pointer;
             z-index: 2;
             
-            @include responsive ($pantalla1){
+            @include mixin.responsive (variables.$pantalla1){
                 width: 2.5em;
                 height: 2.5em;
                 right: 1.5em;
                 bottom: 2em;
             }
-            @include responsive ($pantalla2){
+            @include mixin.responsive (variables.$pantalla2){
                 width: 1.8em;
                 height: 1.8em;
                 right: 0.8em;
@@ -110,10 +112,10 @@
         }
     }
 
-    @include responsive ($pantalla1) {
+    @include mixin.responsive (variables.$pantalla1) {
         font-size: 0.9rem;
     }
-    @include responsive ($pantalla2){
+     @include mixin.responsive (variables.$pantalla2){
         font-size: 0.85rem;
     }
 

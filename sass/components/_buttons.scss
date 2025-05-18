@@ -1,25 +1,27 @@
+@use "base/variables";
+
 .btn {
     padding: 0.75rem 2rem;
     font-weight: bold;
-    border: 2px solid $negro;
+    border: 2px solid variables.$negro;
     border-radius: 20px;
     background-color: transparent;
-    color: $negro;
+    color: variables.$negro;
     text-decoration: none;
 } 
 .btn:hover {
-    background-color: $negro;
-    color: $blanco;
+    background-color: variables.$negro;
+    color: variables.$blanco;
 }
 
 .btn-light {
     @extend .btn;
     background-color: #ffffffcc;
-    color: $negro;
+    color: variables.$negro;
     border: none;
     transition: all 0.3s ease;
     &:hover {
-        background-color: $amarillo;
-        color: $blanco;
+        background-color: variables.$amarillo;
+        color: variables.$blanco;
     }
 }

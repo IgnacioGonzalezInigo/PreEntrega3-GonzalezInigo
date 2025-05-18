@@ -1,3 +1,6 @@
+@use "base/variables";
+@use "base/mixin";
+
 .footer {
     display: flex;
     justify-content: space-between; 
@@ -7,13 +10,13 @@
     text-align: center;
     gap: 0.1rem; 
 
-    @include responsive ($pantalla1) {
+    @include mixin.responsive (variables.$pantalla1) {
         grid-template-columns: repeat(3, 1fr);
     }
     &--columna{
         flex: 1;
         min-width: 250px;
-        @include responsive ($pantalla1){
+        @include mixin.responsive (variables.$pantalla1){
             min-width: auto;
         }
     }
@@ -42,7 +45,7 @@
                 width: 24px;
                 height: 24px;
                 margin: 0 0.5rem;
-                @include responsive ($pantalla2){
+                @include mixin.responsive (variables.$pantalla2){
                     width: 18px;
                     height: auto;
                 }
