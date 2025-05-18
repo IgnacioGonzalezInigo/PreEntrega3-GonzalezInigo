@@ -1,18 +1,446 @@
-/* Error: Undefined variable.
- *   ,
- * 7 |     font-family: $fuente;
- *   |                  ^^^^^^^
- *   '
- *   sass\base\_general.scss 7:18  @use
- *   sass\styles.scss 2:1          root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 7 \2502      font-family: $fuente;\d\a   \2502                   ^^^^^^^\a   \2575 \a   sass\\base\\_general.scss 7:18  @use\a   sass\\styles.scss 2:1          root stylesheet";
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: "Barlow", sans-serif;
+  background-color: #fff;
+  color: #000;
+  max-width: 100%;
+}
+
+.bienvenida h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.resaltado-color {
+  color: #c8d500;
+}
+
+.resaltado-negro {
+  color: #000;
+}
+
+.iframe--box {
+  width: 100%;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+.header--logo {
+  display: flex;
+  align-items: center;
+}
+.header--logo img {
+  width: 50px;
+  height: auto;
+  margin-right: 0.5rem;
+}
+.header--marca {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.header--nav {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: #fff;
+  padding: 1rem 2rem;
+}
+.header--nav ul {
+  list-style: none;
+  padding: 0;
+}
+.header--nav ul li {
+  margin-bottom: 1rem;
+}
+.header--nav ul a {
+  text-decoration: none;
+  color: black;
+}
+.header--nav ul a:hover {
+  color: #c8d500;
+}
+
+/* Menu Hamburguesa Checkbox*/
+.menu-toggle-checkbox {
+  display: none;
+}
+
+.menu-toggle-label {
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu-toggle-checkbox:checked ~ .header--nav {
+  display: block;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  text-align: center;
+  gap: 0.1rem;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.footer--columna {
+  flex: 1;
+  min-width: 250px;
+}
+@media screen and (max-width: 768px) {
+  .footer--columna {
+    min-width: auto;
+  }
+}
+.footer--logo h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.footer--logo img {
+  width: 40px;
+  height: auto;
+}
+.footer--contacto__titulo {
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+.footer--contacto__icons img {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.5rem;
+}
+@media screen and (max-width: 480px) {
+  .footer--contacto__icons img {
+    width: 18px;
+    height: auto;
+  }
+}
+.footer--apps img {
+  width: 120px;
+  height: auto;
+  margin: 0.5rem;
+}
+
+.copy {
+  font-size: 0.7rem;
+  color: #444;
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+.btn, .btn-light {
+  padding: 0.75rem 2rem;
+  font-weight: bold;
+  border: 2px solid #000;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #000;
+  text-decoration: none;
+}
+
+.btn:hover, .btn-light:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-light {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  border: none;
+  transition: all 0.3s ease;
+}
+.btn-light:hover {
+  background-color: #c8d500;
+  color: #fff;
+}
+
+.section--contenedor-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 86%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .section--contenedor-cards {
+    max-width: 92%;
+    margin: 2rem auto;
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1rem;
+}
+.card img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+  filter: brightness(0.5); /* Oscurece la imagen */
+}
+.card .card-titulo {
+  position: absolute;
+  bottom: 0.9em;
+  left: 1em;
+  font-weight: bold;
+  font-size: 2em;
+  color: #fff;
+  z-index: 2;
+}
+@media screen and (max-width: 768px) {
+  .card .card-titulo {
+    font-size: 2.5rem;
+    left: 0.5em;
+    bottom: 0.5em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card .card-titulo {
+    font-size: 2.2em;
+    left: 0.5em;
+    bottom: 0.5em;
+  }
+}
+.card .card-flecha {
+  display: flex;
+  align-items: center;
+}
+.card .card-flecha .boton-flecha {
+  position: absolute;
+  right: 1em;
+  bottom: 1.5em;
+  display: block;
+  width: 2.5em;
+  height: 2.5em;
+  cursor: pointer;
+  z-index: 2;
+}
+@media screen and (max-width: 768px) {
+  .card .card-flecha .boton-flecha {
+    width: 2.5em;
+    height: 2.5em;
+    right: 1.5em;
+    bottom: 2em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card .card-flecha .boton-flecha {
+    width: 1.8em;
+    height: 1.8em;
+    right: 0.8em;
+    bottom: 1.1em;
+  }
+}
+.card .card-flecha .boton-flecha img {
+  position: absolute;
+  filter: brightness(1);
+  width: 100%;
+  height: 100%;
+}
+.card .card-flecha .boton-flecha img.flecha-normal {
+  opacity: 1;
+}
+.card .card-flecha .boton-flecha img.flecha-hover {
+  opacity: 0;
+}
+.card .card-flecha .boton-flecha:hover img.flecha-normal {
+  opacity: 0;
+}
+.card .card-flecha .boton-flecha:hover img.flecha-hover {
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  .card {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card {
+    font-size: 0.85rem;
+  }
+}
+
+.section--boton {
+  text-align: center;
+  margin: 4rem auto;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  min-height: 300px;
+}
+
+.card-clase {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  min-height: 300px; /* Solo altura mínima */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 100%;
+}
+.herosubtitulo {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .herosubtitulo {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .herosubtitulo {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+  }
+}
+.hero h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+.hero--img {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 700px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .hero--img {
+    width: 100%;
+  }
+}
+.hero--img img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+@media screen and (max-width: 480px) {
+  .hero--img img {
+    max-height: 280px;
+  }
+}
+
+.clases, .sedes {
+  padding: 2rem;
+  text-align: center;
+}
+.clases .section--header, .sedes .section--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 7%;
+  margin-bottom: 2%;
+}
+.clases .section--header h2, .sedes .section--header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.clases .section--header .ver-todas, .sedes .section--header .ver-todas {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #000;
+}
+.clases .section--header .ver-todas:hover, .sedes .section--header .ver-todas:hover {
+  color: #c8d500;
+}
+
+/* Caja de Iconos Formulario de Contacto */
+.caja-iconos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.caja-iconos img {
+  width: 30px;
+  height: auto;
+  padding: 4px;
+}
+
+.form-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contacto--foto {
+  display: flex;
+  justify-content: center;
+}
+.contacto--foto img {
+  width: 50%;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  .contacto--foto img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
