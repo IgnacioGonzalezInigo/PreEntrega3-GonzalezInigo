@@ -1,12 +1,14 @@
+@use "variables";
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    font-family: $fuente;
-    background-color:$blanco ;
-    color: $negro;
+    font-family: variables.$fuente;
+    background-color:variables.$blanco ;
+    color: variables.$negro;
     max-width: 100%;
 }
 .bienvenida h1 {
@@ -17,10 +19,10 @@ body {
 }
 
 .resaltado-color {
-    color: $amarillo;
+    color: variables.$amarillo;
 }
 .resaltado-negro {
-    color: $negro;
+    color: variables.$negro;
 }
 
 .iframe--box {
